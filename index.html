@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Огненная сделка</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo.png" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="assets/css/css.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap-vue -->
+
+    <!-- OwlCarousel css -->
+    <link rel="stylesheet" href="owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/assets/owl.theme.default.min.css">
+
+    <!-- OwlCarousel js -->
+</head>
+<body>
+    <div id="vue-app">
+        <!-- Меню гамбургер мобильная версия -->
+        <div class="menu-mb">
+            <div class="menu-mb-button-place">
+                <div class="menu-mb-button"><i class="fa fa-bars" aria-hidden="true"></i></div> 
+            </div>
+            <div class="menu-mb-menu">
+                <div class="menu-mb-menu-close">
+                    <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                </div>
+                <div href="#secondBlock">Заказ</div>
+                <div href="#thirdBlock">Свяжитесь со мной</div>
+                <div href="#fourthBlock">Услуги</div>
+                <div href="#fifthBlock">Предложение</div>
+                <div href="#sixthBlock">Отзывы</div>
+                <div href="#seventhBlock">Контакты</div>
+            </div>
+        </div>
+    
+        <div class="content app">
+    
+            <!-- Шапка -->
+            <div class="head">
+                <div class="head-left">
+                    <img src="assets/img/logo.png" alt="logo">
+                    <div class="head-left-text">Продажа и покупка лидов для вашего бизнеса</div>
+                </div>
+                <div class="head-right">
+                    <a href="https://vk.com/firedeal"><i class="fa fa-vk" aria-hidden="true"></i></a>
+                    <a href="https://t.me/firedeal"><i class="fa fa-telegram" aria-hidden="true"></i></a>
+                    <a href="https://chat.whatsapp.com/KuhqyGoZW5k5lggC34s9HT"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+                    <a href="https://"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                </div>
+            </div>
+    
+            <!-- Меню гамбургер desctop -->
+            <!-- <div class="menu-desctop">
+                <div href="#secondBlock">Заказ</div>
+                <div href="#thirdBlock">Свяжитесь со мной</div>
+                <div href="#fourthBlock">Услуги</div>
+                <div href="#fifthBlock">Предложение</div>
+                <div href="#sixthBlock">Отзывы</div>
+                <div href="#seventhBlock">Контакты</div>
+            </div> -->
+    
+            <!-- Первый блок  -->
+            <div class="first">
+                <div class="first-left">
+                    <p class="first-left-text-first">Хорошие отзывы должны вознаграждаться!</p>
+                    <p class="first-left-text-second">Мы предлагаем тебе платформу, на которой собраны специалисты из разных областей</p>
+                    <p class="first-left-text-third">Оставь свою почту и получи список специалистов,<br> с помощью которых можешь заработать уже сегодня</p>
+                    <div class="first-left-input-place">
+                        <div class="first-left-input">
+                            <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                            <input type="text" v-model="email" placeholder="Введите почту">
+                        </div>
+                        <div class="first-left-button-place">
+                            <div href="#secondBlock" class="first-left-button">Получить список</div>
+                        </div>  
+                    </div>
+                    <div class="first-left-money">
+                        <div class="first-left-money-left">
+                            <img src="assets/img/s02-img2.png" alt="money">
+                        </div>
+                        <div class="first-left-money-right">
+                            <p>Привел клиента - <span>получи 10%</span><br>от заработанной со сделки<br>суммы или от маржи</p>
+                            <div href="#thirdBlock" class="first-left-money-button">Продать заказ</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="first-rigth">
+                    <div class="first-right-video-place">
+                        <iframe width="490" height="324" src="https://www.youtube.com/embed/sg0VY03cAG0?start=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="first-rigth-text">
+                        <p>Смотрите короткое видео <br> от создателя Огненой Сделки</p>
+                    </div>
+                </div>
+            </div>
+            <!-- второй блок Заказ -->
+            <div class="second">
+                <div class="second-left">
+                    <p><span>Все просто:</span> по твоей рекомендации<br>покупают - ты зарабатываешь!</p>
+                    <p>При этом стоимость товаров и услуг<br>на сервисе такая же, как без него</p>
+                    <img src="assets/img/laptop.png" alt="laptop">
+                </div>
+                <form class="second-right form" action="mailer/smart.php" method="POST">
+                    <div class="second-right-input name" id="secondBlock">
+                        <i class="fa fa-user-o" aria-hidden="true"></i>
+                        <input type="text" v-model="name" class="user_name" placeholder="Введите имя">
+                    </div>
+                    <div class="second-right-input email">
+                        <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                        <input type="text" v-model="email" class="user_mail" placeholder="Введите почту">
+                    </div>
+                    <div class="second-right-radio check sell sell-button">
+                        <input class="text_radio_first" type="radio" name="text_radio_first" v-model="text_radio_first" value="Я хочу продовать заказы">
+                        <p>Я хочу продовать заказы</p>
+                    </div>
+                    <div class="second-right-radio check buy">
+                        <input class="text_radio_first" type="radio" name="text_radio_first" v-model="text_radio_first" value="Я хочу покупать заказы">
+                        <p>Я хочу покупать заказы</p>
+                    </div>
+                    <div class="second-right-radio check buy">
+                        <input class="text_radio_first" type="radio" name="text_radio_first" v-model="text_radio_first" value="Реклама">
+                        <p>Реклама</p>
+                    </div>
+                    <div class="first-left-button sell-button" v-on:click="getList submit">Получить список</div>
+                    <p class="second-right-p">Нажимая на кнопку вы даете согласие<br>на обработку персональных данных<br>и соглашаетесь с Политикой конфиденциальности</p>
+                </form>
+            </div>
+    
+            <!-- третий блок Свяжитесь со мной -->
+            <div class="third">
+                <div class="third-left">
+                    <p class="third-left-p-first">Тебе <span>не нужно</span> специально искать<br>заказы и привлекать людей в систему</p>
+                    <p class="third-left-p-second">Здесь нет сетевого маркетинга многоуровневых<br>схем и сложных процентов</p>
+                    <div class="img-place">
+                        <img class="inta" src="assets/img/inta.png" alt="inta">
+                        <img class="wotsap" src="assets/img/wotsap.png" alt="wotsap">
+                        <img class="tviter" src="assets/img/tviter.png" alt="tviter">
+                        <img class="fuckbook" src="assets/img/fuckbook.png" alt="fuckbook">
+                    </div>
+                </div>
+                <form class="third-right form" action="mailer/smart.php" method="POST">
+                    <div class="second-right-input name" id="thirdBlock">
+                        <i class="fa fa-user-o" aria-hidden="true"></i>
+                        <input type="text" v-model="name" class="user_name" placeholder="Введите имя">
+                    </div>
+                    <div class="second-right-input phone">
+                        <i class="fa fa-volume-control-phone" aria-hidden="true"></i>
+                        <input class="text_radio_first" type="text" v-model="phone" class="user_phone" placeholder="Введите телефон">
+                    </div>
+                    <div class="second-right-input email">
+                        <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                        <input class="text_radio_first" type="text" v-model="email" class="user_mail" placeholder="Введите почту">
+                    </div>
+                    <div class="second-right-radio check sell sell-button">
+                        <input class="text_radio_first" type="radio" name="text_radio_second" v-model="text_radio_second" value="Я заказчик">
+                        <p>Я заказчик</p>
+                    </div>
+                    <div class="second-right-radio check buy">
+                        <input type="radio" name="text_radio_second" v-model="text_radio_second" value="Я рекомендую">
+                        <p>Я рекомендую</p>
+                    </div>
+                    <div class="first-left-button sell-button submit" v-on:click="getCallBack">Свяжитесь со мной</div>
+                    <p class="second-right-p">Нажимая на кнопку вы даете согласие<br>на обработку персональных данных<br>и соглашаетесь с Политикой конфиденциальности</p>
+                </form>
+            </div>
+    
+            <!-- четвертый блок Услуги -->
+            <div class="fourth" id="fourthBlock">
+                <!-- Set up your HTML -->
+                <div class="owl-carousel">
+                    <!-- <serviceItem
+                        v-for="arrayItem in serviceArray"
+                        v-bind:key="arrayItem.id"
+                        v-bind:arrayItem="arrayItem"
+                    >
+                    </serviceItem> -->
+                    <div class="item">
+                        <div class="item-block" @click="getBuyService">
+                            <div class="item-block-text-first">Продажа почки</div>
+                            <div class="item-block-price">2900р/месяц</div>
+                            <div class="item-block-text-second">Продается резиновая почка 'Игрушка', для ванны</div>
+                            <div class="item-block-button" serviceName="Продажа почки">Оставить запрос</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-block" @click="getBuyService">
+                            <div class="item-block-text-first">Продажа ножки</div>
+                            <div class="item-block-price">900р/месяц</div>
+                            <div class="item-block-text-second">Продается резиновая нога 'Игрушка', для ванны</div>
+                            <div class="item-block-button" serviceName="Продажа ножки">Оставить запрос</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-block" @click="getBuyService">
+                            <div class="item-block-text-first">Продажа машины</div>
+                            <div class="item-block-price">33900р/месяц</div>
+                            <div class="item-block-text-second">Продается резиновая машина 'Игрушка', для ванны</div>
+                            <div class="item-block-button" serviceName="Продажа машины">Оставить запрос</div>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+    
+            <!-- пятый блок Предложение-->
+            <div class="fifth" id="fifthBlock">
+                <div class="fifth-text-title">Что мы предлагаем?</div>
+                <div class="fifth-text-midel">Зарегистрироваться в проекте 1 раз, чтобы пожизненно использовать возможность пассивно зарабатывать, продавая своих ненужных и покупая нужных</div>
+                <div class="fifth-place-block">
+                    <div class="fifth-place-block-item">
+                        <img src="assets/img/шестеренка.png" alt="Image">
+                        <div class="fifth-place-block-item-text-block">
+                            <p>Интересное название</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores repudiandae cum modi error iure, dolor praesentium.</p>
+                        </div>
+                    </div>
+                    <div class="fifth-place-block-item">
+                        <img src="assets/img/шестеренка.png" alt="Image">
+                        <div class="fifth-place-block-item-text-block">
+                            <p>Интересное название</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores repudiandae cum modi error iure, dolor praesentium.</p>
+                        </div>
+                    </div>
+                    <div class="fifth-place-block-item">
+                        <img src="assets/img/шестеренка.png" alt="Image">
+                        <div class="fifth-place-block-item-text-block">
+                            <p>Интересное название</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores repudiandae cum modi error iure, dolor praesentium.</p>
+                        </div>
+                    </div>
+                    <div class="fifth-place-block-item">
+                        <img src="assets/img/шестеренка.png" alt="Image">
+                        <div class="fifth-place-block-item-text-block">
+                            <p>Интересное название</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores repudiandae cum modi error iure, dolor praesentium.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- шестой блок Отзывы клиентов -->
+            <div class="sixth" id="sixthBlock">
+                <div class="sixth-text-title">Отзывы клиентов</div>
+                <!-- Set up your HTML -->
+                <div class="owl-carousel">
+                    <div class="item">
+                        <div class="item-block">
+                            <div class="img-user" style="background: url(assets/img/1.jpg); background-size: cover;"></div>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda porro soluta corrupti mollitia architecto. Fugit, sapiente quasi minus rem vero optio, dolorum, magni quis ad cum explicabo praesentium iste modi!</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-block">
+                            <div class="img-user" style="background: url(assets/img/2.jpg); background-size: cover;"></div>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda porro soluta corrupti mollitia architecto. Fugit, sapiente quasi minus rem vero optio, dolorum, magni quis ad cum explicabo praesentium iste modi!</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-block">
+                            <div class="img-user" style="background: url(assets/img/3.jpg); background-size: cover;"></div>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda porro soluta corrupti mollitia architecto. Fugit, sapiente quasi minus rem vero optio, dolorum, magni quis ad cum explicabo praesentium iste modi!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </div>
+    
+        <!-- Седьмой блок -->
+        <div class="seventh" id="seventhBlock">
+            <div class="seventh-content">
+                <div class="seventh-left">
+                    <p>Контакты:<br>+7 (911) 000-00-00</p>
+                </div>
+                <div class="seventh-rigth"><img src="assets/img/logo.png" alt="logo"></div>
+            </div>
+        </div>  
+    
+        <!-- Модальное окно -->
+        <div class="modal-error app">
+            <div class="modal-error-block">
+                <div class="modal-error-block-message">
+                    {{ modal_error_message }}
+                </div>
+                <div class="modal-error-block-button">Хорошо</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/polyfill@latest/dist/polyfill.min.js"></script>
+<script src="https://unpkg.com/vue@latest/dist/vue.min.js"></script>
+<script src="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.js"></script>
+<script src="owlcarousel/owl.carousel.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+
+<!-- Form validations-vue -->
+<script src="https://unpkg.com/vee-validate@latest"></script>
+<script src="https://cdn.jsdelivr.net/npm/@precision-nutrition/vee-validate@2.1.8/dist/locale/ru.min.js"></script>
+
+<!-- Axios-vue -->
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+<!-- JQuery -->
+
+<script>
+    $('form').submit(function(event){
+
+        event.preventDefault();
+        $.ajax({
+            type: "POST",
+            url: "mailer/smart.php",
+            data: $(this).serialize()
+        }).done(function(){
+            $(this).find("input").val("");
+            swal("Спасибо!", "Мы вам перезвоним!", "success")
+            $("form").trigger("reset");
+        });
+        return false;
+
+    });
+</script>
+
+<script>
+    // Menu открыть
+    $('.menu-mb-button').on("click", function(){ $('.menu-mb-menu').css("left","0px"); });
+
+    // Menu закрыть
+    $('.menu-mb-menu').on("click", "div", function(){ $('.menu-mb-menu').css("left","-300px"); });
+
+    // Закрыть modal-error
+    $('.modal-error-block-button').on("click", function() { $('.modal-error').hide(); });
+
+    // Получить услугу закрыть модальное окно
+    $('.modal-error-block-button').on("click", function() { $('.modal-error').css("display","none"); });
+
+    // Листалка вниз
+    $(".first-left,.menu-desctop,.menu-mb-menu").on("click", "div", function(event){
+
+        event.preventDefault();
+
+        var id = $(this).attr('href');
+
+        var top = $(id).offset().top;
+
+        $("body,html").animate({scrollTop: top - 60 }, 1000);
+
+        return false;
+    });
+
+    // owlCarousel
+    $('.owl-carousel').owlCarousel({
+        doots: true,
+        center: true,
+        items:1,
+        margin:10,
+        loop:true,
+        responsive:{
+            1141 : {
+                items:3
+            }
+        }
+    });
+</script>
+
+
+<script>
+   Vue.component("serviceItem", {
+       props: ['arrayItem'],
+        temlate: `
+        <div class="item">
+           <div class="item-block" >
+               <div class="item-block-text-first">{{ arrayItem.title }}</div>
+               <div class="item-block-price">{{ arrayItem.price }}р/месяц</div>
+               <div class="item-block-text-second">{{ arrayItem.text }}</div>
+               <div class="item-block-button" v-bind:id="arrayItem.id">Оставить запрос</div>
+           </div>
+       </div>
+       `,
+   });
+   v-on:click="arrayItem.send(arrayItem.id)"
+   var vue = new Vue({
+       el: "#vue-app",
+       data: {
+           name: "",
+           phone: "",
+           email: "",
+           text_radio_first: "",
+           text_radio_second: "",
+           modal_error_message: "",
+           serviceArray: [-->
+               { id: 1, title: "Продажа почки", price: 2900, text: "Продается резиновая почка 'Игрушка', для ванны" },
+               { id: 2, title: "Продажа ножки", price: 900, text: "Продается резиновая нога 'Игрушка', для ванны" },
+               { id: 3, title: "Продажа машины", price: 33900, text: "Продается резиновая машина 'Игрушка', для ванны" }
+           ],-->
+           aboutArray: new Array(),
+       },
+       methods: {
+           // Получить лист-->
+           // Вызвать модальное окно
+           getModal(message) {-->
+               this.modal_error_message = message;
+               $('.modal-error').css("display","flex");
+           },
+           // Отправить заявку на покупку услуги
+           getBuyService() {
+               $(this).attr('serviceName');
+           },
+           // Заполнить слайдер с услугами
+       getServices(array) {
+              for(var i = 0; i < array.length; i++) {
+
+                  var item = {
+                      id: array.id,
+                      title: array.title,
+                      price: array.price,
+                      text: array.text,
+                       send: this.getBuyService(array.id)
+                 };
+
+                 this.serviceArray[i] = item;
+             }
+           }
+      },
+      mounted() {
+
+         // this.getServices();
+
+</script>
+</html>
